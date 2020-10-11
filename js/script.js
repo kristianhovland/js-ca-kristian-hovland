@@ -31,7 +31,7 @@ function handleClick() {
   this.classList.toggle("fa");
   this.classList.toggle("far");
 
-  const name = this.dataset.id;
+  const id = this.dataset.id;
   const name = this.dataset.name;
 
   const currentFavs = getExistingFavs();
@@ -43,10 +43,6 @@ function getExistingFavs() {
   if (favs === null) {
     return [];
   } else {
-    return JSON.parse(favs);
+    return favs;
   }
-}
-
-function saveFavs(favs) {
-  localStorage.setItem("favourites", JSON.stringify(favs));
 }

@@ -1,5 +1,4 @@
 export function renderPokemon(pokemonToRender) {
-  import { renderPokemon } from "./renderPokemon";
   const resultsContainer = document.querySelector(".result-container");
   resultsContainer.innerHTML = "";
 
@@ -8,7 +7,7 @@ export function renderPokemon(pokemonToRender) {
     <h2>${pokemon.name}</h2>
     <h3>${pokemon.types}</h3>
     <h4>${pokemon.set}</h4>
-    <i class="far fa-heart" data-id="${pokemon.name}" data-name="${renderPokemon}"></i>
+    <i class="far fa-heart" data-id="${pokemon.name}" data-name="${pokemon.name}"></i>
     </div>`;
   });
 }
