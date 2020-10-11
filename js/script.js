@@ -10,7 +10,7 @@ async function getPokemon() {
     const results = await response.json();
 
     const pokemon = results.cards;
-
+    console.log(results.cards);
     renderPokemon(pokemon);
     searchPokemon(pokemon);
   } catch (error) {
@@ -20,29 +20,3 @@ async function getPokemon() {
 }
 
 getPokemon();
-
-const favButtons = document.querySelectorAll(".result");
-
-favButtons.forEach((button) => {
-  button.addEventListener("click", handleClick);
-});
-
-function handleClick() {
-  this.classList.toggle("fa");
-  this.classList.toggle("far");
-
-  const id = this.dataset.id;
-  const name = this.dataset.name;
-
-  const currentFavs = getExistingFavs();
-}
-
-function getExistingFavs() {
-  const favs = localStorage.getItem("favourites");
-
-  if (favs === null) {
-    return [];
-  } else {
-    return favs;
-  }
-}
