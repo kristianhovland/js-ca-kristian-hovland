@@ -48,5 +48,5 @@ function getExistingFavs() {
 }
 
 function saveFavs(favs) {
-  localStorage.setItem("favourites", JSON.stringify(favs);)
+  localStorage.setItem("favourites", JSON.stringify(favs));
 }
